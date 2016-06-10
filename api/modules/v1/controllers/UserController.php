@@ -23,8 +23,15 @@ class UserController extends ActiveController
     {
         $actions = parent::actions();
         unset($actions['create']);
+		$actions['index']['prepareDataProvider'] = [$this, 'prepareDataProvider'];
         return $actions;
     }
+
+	public function prepareDataProvider() 
+	{
+	    $searchModel = new \common\models\UserSearchAPI;    
+	    return $searchModel->search(\Yii::$app->request->queryParams);
+	}
 
     public function actionCreate(){
     	

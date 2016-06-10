@@ -41,13 +41,28 @@ return [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule', 
-                    'controller' => ['v1/country', 'v1/city', 'v1/user', 'v1/node'],
-                    //'tokens' => [
-                    //    '{id}' => '<id:\\w+>'
-                    //]
+                    'controller' => ['v1/country'],
+                    //'extraPatterns' => ['POST login' => 'login']
+                    
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => ['v1/city'],
+                    //'extraPatterns' => ['POST search' => 'search']
+                    
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => ['v1/user'],
                     'extraPatterns' => ['POST login' => 'login']
                     
-                ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => ['v1/node'],
+                    //'extraPatterns' => ['POST login' => 'login']
+                    
+                ],
             ],        
         ]
     ],

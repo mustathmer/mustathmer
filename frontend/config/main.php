@@ -34,7 +34,7 @@ return [
             'languages' 		=> ['en', 'ar'],
 
             'enablePrettyUrl' 	=> true,
-            'showScriptName'  	=> false,
+            'showScriptName'  	=> true,
             'rules' => [
             ],
         ],

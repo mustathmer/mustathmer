@@ -37,7 +37,7 @@ return [
 
             'enablePrettyUrl' 		=> true,
             'enableStrictParsing' 	=> true,
-            'showScriptName' 		=> false,
+            'showScriptName' 		=> true,
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule', 

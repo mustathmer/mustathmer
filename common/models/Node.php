@@ -77,7 +77,7 @@ class Node extends \yii\db\ActiveRecord
             [['end_point_city_id'], 	'exist', 'skipOnError' => true, 'targetClass' => City::className(), 	'targetAttribute' => ['end_point_city_id' 	=> 'id']],
             [['user_id'], 				'exist', 'skipOnError' => true, 'targetClass' => User::className(), 	'targetAttribute' => ['user_id' 			=> 'id']],
             
-			[['start_point_time', 'end_point_time'], 'date', 'format'=>'H:i'],
+			//[['start_point_time', 'end_point_time'], 'date', 'format'=>'H:i'],
 			
 			[['start_point_time', 'end_point_time', 'created_at', 'updated_at'], 'safe'],
         ];
